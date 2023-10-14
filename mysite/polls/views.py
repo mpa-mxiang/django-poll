@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
-
-from .models import Question
-
+from django.http import HttpResponseRedirect, Http404
+from .models import Question, Choice
+from django.urls import reverse
 
 def index(request):
     latest_question_list = Question.objects.order_by("-pub_date")[:5]
