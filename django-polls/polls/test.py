@@ -1,3 +1,7 @@
+"""
+Unit tests for the Question model in the polls app.
+"""
+
 import datetime
 
 from django.test import TestCase
@@ -7,6 +11,9 @@ from .models import Question
 
 
 class QuestionModelTests(TestCase):
+    """
+    Test cases for the Question model.
+    """
     def test_was_published_recently_with_future_question(self):
         """
         was_published_recently() returns False for questions whose pub_date
